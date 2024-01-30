@@ -17,7 +17,7 @@ By the end of this lesson, you will know:
 
 The `transform` property takes in one or more CSS transform functions as its values, with those functions taking in their own value, usually an angle or a number.
 
-Almost all elements can have the `transform` property applied to it, with the exceptions being `<col>`, `<colgroup>`, and non-replaced inline elements. "Non-replaced" simply refers to elements whose content is contained within the HTML document (`<span>`, `<b>`, and `<em>`, for example), as opposed to a "replaced" element's content being contained outside of the document (`<a>`, `<iframe>`, and `<img>`, for example). You do not need to memorize every element that is non-replaced, but rather keep this knowledge in mind should you try to apply the `transform` property to an element and aren't sure why it isn't working.
+Almost all elements can have the `transform` property applied to it, with the exceptions being `<col>`, `<colgroup>`, and non-replaced inline elements. "Non-replaced" refers to elements whose content is contained within the HTML document (`<span>`, `<b>`, and `<em>`, for example), as opposed to a "replaced" element's content being contained outside of the document (`<a>`, `<iframe>`, and `<img>`, for example). You do not need to memorize every element that is non-replaced, but rather keep this knowledge in mind should you try to apply the `transform` property to an element and aren't sure why it isn't working.
 
 ### Two-dimensional transforms
 
@@ -107,7 +107,7 @@ Below is a CodePen that shows how each value affects the target element.
 
 ### Chaining multiple transforms
 
-Now that you have a grasp of 2D transforms, we will learn how to chain them. Chaining multiple transforms is as simple as adding more transform functions with a space between each one. Take a look at the code below:
+Now that you have a grasp of 2D transforms, we will learn how to chain them. Chaining multiple transforms is done by adding more transform functions with a space between each one. Take a look at the code below:
 
 ~~~html
 <div class="red-box"></div>
@@ -144,13 +144,11 @@ There are two boxes located at the same position. We chained `rotate` and `trans
 
 If you guessed correctly, congratulations! But this is a tricky concept. There is a bit of debate on how to read a chain of transform functions. According to [MDN's transform docs](https://developer.mozilla.org/en-US/docs/Web/CSS/transform#values): "The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively applied in order from right to left."
 
-To learn more about the "left to right" vs "right to left" interpretations, check out this visual article on [chaining transforms](https://codepen.io/bali_balo/post/chaining-transforms).
-
 While you can generally chain multiple transforms in any order for various results, there is one exception: `perspective`. This brings us nicely to the next section where `perspective` is involved.
 
 ### Three-dimensional transforms
 
-The `rotate`, `scale`, and `translate` transform functions aren't limited to just the 2D plane. They work for the 3D plane as well! However, to perceive a 3D effect on some of these function values, `perspective` is required.
+The `rotate`, `scale`, and `translate` transform functions aren't limited to just 2D planes. They also work for 3D planes as well! However, to perceive a 3D effect on some of these function values, `perspective` is required.
 
 From here on, the examples get more complicated, so there will be more links to external resources which do an excellent job describing how each property works. Play around with these properties until you feel comfortable with them, but be careful not to get too sidetracked with them.
 
@@ -172,7 +170,7 @@ For more details on how `perspective` works in regards to 3D transforms, [check 
 
 #### Rotate
 
-These are the additional transform function values to rotate an element on a 3D plane:
+These are the additional transform function values to rotate an element in a 3D space:
 
 ~~~css
 .element {
@@ -196,7 +194,7 @@ To learn about how `rotate3d` works, check out [this great demonstration](https:
 
 #### Scale
 
-These are the additional transform function values to scale an element on a 3D plane:
+These are the additional transform function values to scale an element in a 3D space:
 
 ~~~css
 .element {
@@ -209,7 +207,7 @@ See MDN's 3D cube in action with `scaleZ` [here](https://developer.mozilla.org/e
 
 #### Translate
 
-These are the additional transform function values to translate an element on a 3D plane:
+These are the additional transform function values to translate an element in a 3D space:
 
 ~~~css
 .element {
